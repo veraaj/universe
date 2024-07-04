@@ -1,0 +1,262 @@
+/* Resetting default body styles */
+body {
+    margin: 0; /* Remove default margin */
+    height: 100vh; /* Set full viewport height */
+    display: flex; /* Use flexbox for centering */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    background-image: linear-gradient(
+      to right top,
+      #331fbb,
+      #1c2199,
+      #0d1f78,
+      #0c1a56,
+      #0e1435,
+      #151834,
+      #1a1c32,
+      #1f2031,
+      #30314f,
+      #424470,
+      #555792,
+      #6a6ab5
+    ); /* Gradient background */
+    overflow: hidden; /* Hide overflowing content */
+  }
+  
+  /* Styling for the main container */
+  .container {
+    width: 40em; /* Set width of the container */
+    height: 40em; /* Set height of the container */
+    position: relative; /* Position relative for absolute positioning */
+    font-size: 6px;
+  }
+  
+  /* Styling for images inside the container */
+  img {
+    height: 130%; /* Increase image height */
+    width: 130%; /* Increase image width */
+  }
+  
+  /* Styling for the sun */
+  .sun {
+    display: flex; /* Use flexbox */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    position: absolute; /* Position sun absolutely */
+    top: 15em; /* Position from top */
+    left: 15em; /* Position from left */
+    width: 10em; /* Set sun's width */
+    height: 10em; /* Set sun's height */
+    border-radius: 50%; /* Rounded shape */
+    box-shadow: 0 0 3em rgb(255, 128, 0); /* Shadow effect */
+    animation: orbit 50s linear infinite; /* Animation for orbiting */
+  }
+  
+  /* Styling for planets */
+  .planet {
+    position: absolute; /* Position planets absolutely */
+    border-style: solid; /* Solid border */
+    border-color: white transparent transparent transparent; /* Border color */
+    border-width: 0.3em 0.2em 0 0; /* Border width */
+    border-radius: 50%; /* Rounded shape */
+  }
+  
+  /* Styling for planet satellites */
+  .planet::before {
+    content: ""; /* Empty content for pseudo-element */
+    position: absolute; /* Position pseudo-element absolutely */
+    border-radius: 50%; /* Rounded shape */
+    animation: orbit 30s linear infinite; /* Animation for orbiting */
+  }
+  
+  /* Styling for Mercury */
+  .mercury::before {
+    top: 1.5em; /* Position from top */
+    right: 0.8em; /* Position from right */
+    width: 2em; /* Set width */
+    height: 2em; /* Set height */
+    background-image: url("./images/mercury.png"); /* Background image */
+    background-size: cover; /* Cover background size */
+  }
+  
+  .mercury {
+    top: 12.5em; /* Position from top */
+    left: 12.5em; /* Position from left */
+    width: 15em; /* Set width */
+    height: 15em; /* Set height */
+    animation: orbit 68.7s linear infinite; /* Animation for orbiting */
+  }
+  
+  /* Styling for Venus */
+  .venus {
+    top: 10em; /* Position from top */
+    left: 10em; /* Position from left */
+    width: 20em; /* Set width */
+    height: 20em; /* Set height */
+    animation: orbit 48.7s linear infinite; /* Animation for orbiting */
+  }
+  
+  .venus::before {
+    top: 2em; /* Position from top */
+    right: 2em; /* Position from right */
+    width: 2em; /* Set width */
+    height: 2em; /* Set height */
+    background-image: url("./images/venus.png"); /* Background image */
+    background-size: cover; /* Cover background size */
+  }
+  
+  /* Styling for Earth and Moon */
+  .earth {
+    top: 6em; /* Position from top */
+    left: 6em; /* Position from left */
+    width: 28em; /* Set width */
+    height: 28em; /* Set height */
+    animation: orbit 36.5s linear infinite; /* Animation for orbiting */
+  }
+  
+  .moon {
+    top: 2em; /* Position from top */
+    right: -1em; /* Position from right */
+    width: 7em; /* Set width */
+    height: 7em; /* Set height */
+    animation: orbit 2.7s linear infinite; /* Animation for orbiting */
+  }
+  
+  .earth::before {
+    top: 3em; /* Position from top */
+    right: 0em; /* Position from right */
+    width: 5em; /* Set width */
+    height: 5em; /* Set height */
+    background-image: url("./images/earth.png"); /* Background image */
+    background-size: cover; /* Cover background size */
+  }
+  .moon::before {
+    top: 0.8em; /* Position from top */
+    right: 0.2em; /* Position from right */
+    width: 1.2em; /* Set width */
+    height: 1.2em; /* Set height */
+    background-image: url("./images/moon.png"); /* Background image */
+    background-size: cover; /* Cover background size */
+  }
+  
+  /* Styling for Mars */
+  .mars {
+    top: 2em; /* Position from top */
+    left: 2.5em; /* Position from left */
+    width: 36em; /* Set width */
+    height: 36em; /* Set height */
+    animation: orbit 26.5s linear infinite; /* Animation for orbiting */
+  }
+  
+  .mars::before {
+    top: 5em; /* Position from top */
+    right: 3em; /* Position from right */
+    width: 3em; /* Set width */
+    height: 3em; /* Set height */
+    background-image: url("./images/mars.png"); /* Background image */
+    background-size: cover; /* Cover background size */
+  }
+  
+  /* Styling for Jupiter */
+  .jupiter {
+    top: -2em; /* Position from top */
+    left: -2em; /* Position from left */
+    width: 45em; /* Set width */
+    height: 45em; /* Set height */
+    animation: orbit 21s linear infinite; /* Animation for orbiting */
+  }
+  
+  .jupiter::before {
+    top: 6em; /* Position from top */
+    right: 3em; /* Position from right */
+    width: 5em; /* Set width */
+    height: 5em; /* Set height */
+    background-image: url("./images/jupiter.png"); /* Background image */
+    background-size: cover; /* Cover background size */
+  }
+  
+  /* Styling for Saturn */
+  .saturn {
+    top: -7em; /* Position from top */
+    left: -7em; /* Position from left */
+    width: 55em; /* Set width */
+    height: 55em; /* Set height */
+    animation: orbit 17s linear infinite; /* Animation for orbiting */
+  }
+  
+  .saturn::before {
+    top: 7.5em; /* Position from top */
+    right: 4.8em; /* Position from right */
+    width: 4.5em; /* Set width */
+    height: 4.5em; /* Set height */
+    background-image: url("./images/saturn.png"); /* Background image */
+    background-size: cover; /* Cover background size */
+  }
+  
+  /* Styling for Uranus */
+  .uranus {
+    top: -12em; /* Position from top */
+    left: -12em; /* Position from left */
+    width: 65em; /* Set width */
+    height: 65em; /* Set height */
+    animation: orbit 19s linear infinite; /* Animation for orbiting */
+  }
+  
+  .uranus::before {
+    top: 12em; /* Position from top */
+    right: 4em; /* Position from right */
+    width: 4em; /* Set width */
+    height: 4em; /* Set height */
+    background-image: url("./images/uranus.png"); /* Background image */
+    background-size: cover; /* Cover background size */
+  }
+  /* Styling for Neptune */
+.neptune {
+    top: -17em; /* Position from top */
+    left: -17em; /* Position from left */
+    width: 75em; /* Set width */
+    height: 75em; /* Set height */
+    animation: orbit 15s linear infinite; /* Animation for orbiting */
+  }
+  
+  .neptune::before {
+    top: 14em; /* Position from top */
+    right: 5em; /* Position from right */
+    width: 4em; /* Set width */
+    height: 4em; /* Set height */
+    background-image: url("./images/neptune.png"); /* Background image */
+    background-size: cover; /* Cover background size */
+  }
+  
+  /* Styling for Pluto */
+  .pluto {
+    top: -22em; /* Position from top */
+    left: -22em; /* Position from left */
+    width: 85em; /* Set width */
+    height: 85em; /* Set height */
+    animation: orbit 18s linear infinite; /* Animation for orbiting */
+  }
+  
+  .pluto::before {
+    top: 16em; /* Position from top */
+    right: 5.5em; /* Position from right */
+    width: 4em; /* Set width */
+    height: 4em; /* Set height */
+    background-image: url("./images/pluto.png"); /* Background image */
+    background-size: cover; /* Cover background size */
+  }
+  
+  /* Styling for stars */
+  .star {
+    position: absolute; /* Position stars absolutely */
+    background-color: white; /* Star color */
+    border-radius: 50%; /* Rounded shape */
+    z-index: -1; /* Behind planets and sun */
+  }
+  
+  /* Animation keyframes for orbiting */
+  @keyframes orbit {
+    to {
+      transform: rotate(360deg); /* Rotate 360 degrees */
+    }
+  }
